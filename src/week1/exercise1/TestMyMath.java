@@ -39,5 +39,7 @@ public class TestMyMath {
         MyMath.isPrime(20);//expected yes
         MyMath.isPrime(21);//expected yes
         MyMath.isPrime(23);//expected yes
+
+        System.exit(0);
     }
 }
