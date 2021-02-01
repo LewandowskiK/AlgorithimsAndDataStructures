@@ -28,17 +28,17 @@ public class TestMyMath {
         System.out.println(MyMath.factorial(6));//expected 720
 
         System.out.println("\n\nChecking if a number is prime:");
-        MyMath.isPrime(3);//expected yes
-        MyMath.isPrime(4);//expected no
-        MyMath.isPrime(5);//expected yes
-        MyMath.isPrime(6);//expected no
-        MyMath.isPrime(7);//expected yes
-        MyMath.isPrime(11);//expected yes
-        MyMath.isPrime(13);//expected yes
-        MyMath.isPrime(15);//expected no
-        MyMath.isPrime(20);//expected no
-        MyMath.isPrime(21);//expected no
-        MyMath.isPrime(23);//expected yes
+        System.out.println(MyMath.isPrime(3));//expected yes
+        System.out.println(MyMath.isPrime(4));//expected no
+        System.out.println(MyMath.isPrime(5));//expected yes
+        System.out.println(MyMath.isPrime(6));//expected no
+        System.out.println(MyMath.isPrime(7));//expected yes
+        System.out.println(MyMath.isPrime(11));//expected yes
+        System.out.println(MyMath.isPrime(13));//expected yes
+        System.out.println(MyMath.isPrime(15));//expected no
+        System.out.println(MyMath.isPrime(20));//expected no
+        System.out.println(MyMath.isPrime(21));//expected no
+        System.out.println(MyMath.isPrime(23));//expected yes
 
         System.exit(0);
     }

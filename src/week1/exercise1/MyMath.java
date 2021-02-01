@@ -66,26 +66,18 @@ public class MyMath {
         return result;
     }
 
-    public static void isPrime(int a){
+    public static boolean isPrime(int a) {
+        if (a % 2 != 0) {
+            int i;
+            int middle = a / 2;
 
-        if(a%2!=0){
-            int middle = a/2;
-            boolean factorial = true;
-            for(int i = 2; i <= middle; i++){
-                if(a % i == 0){
-                    factorial = false;
-                    break;
+            for (i = 2; i <= middle; i++) {
+                if (a % i == 0) {
+                    return false;
                 }
             }
-            if(factorial){
-                System.out.println("Integer " + a + " is a prime number!");
-            }
-            else {
-                System.out.println("Integer " + a + " is not a prime number");
-            }
+            return true;
         }
-        else{
-            System.out.println("Integer " + a + " is not a prime number");
-        }
+        return false;
     }
 }
