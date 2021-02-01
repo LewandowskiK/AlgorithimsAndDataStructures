@@ -35,9 +35,9 @@ public class TestMyMath {
         MyMath.isPrime(7);//expected yes
         MyMath.isPrime(11);//expected yes
         MyMath.isPrime(13);//expected yes
-        MyMath.isPrime(15);//expected yes
-        MyMath.isPrime(20);//expected yes
-        MyMath.isPrime(21);//expected yes
+        MyMath.isPrime(15);//expected no
+        MyMath.isPrime(20);//expected no
+        MyMath.isPrime(21);//expected no
         MyMath.isPrime(23);//expected yes
 
         System.exit(0);

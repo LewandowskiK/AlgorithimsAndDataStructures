@@ -7,6 +7,7 @@ public class NumberList {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int number=1;
+        //could be a separate arraylist rather than generating a 1-100 array
         int[] numbersTo100 = populateArray();
         int[] counter = new int[100];
 
@@ -25,7 +26,11 @@ public class NumberList {
         System.out.println("--------------------");
 
         for(int i=0; i < numbersTo100.length; i++){
-            System.out.println(String.format("%-10d||%-10d",numbersTo100[i],counter[i]));
+
+            if(counter[i]>0){
+                System.out.println(String.format("%-10d||%-10d",numbersTo100[i],counter[i]));
+            }
+
         }
         System.exit(0);
     }
@@ -37,7 +42,6 @@ public class NumberList {
         for(int i = 0; i < array.length; i++){
 
             array[i] = i+1;
-
         }
 
         return array;
