@@ -38,20 +38,14 @@ public class Encryptor {
         String plaintext = "";
 
         int numRows = cipherText.length()/numColumns;
-        int index = 0;
 
-        for(int letterCount = 0; letterCount < cipherText.length();){
-            plaintext += cipherText.charAt(index);
 
-            index+=numRows;
-            letterCount++;
+        for(int row = 0; row < numRows; row++){
+            int index = row;
 
-            if(letterCount % numColumns==0){
-                index++;
-            }
-
-            if(index>cipherText.length()-1){
-                index -= cipherText.length();
+            for(int col = 0; col < numColumns; col++){
+                plaintext += cipherText.charAt(index);
+                index += numRows;
             }
         }
 
