@@ -11,6 +11,7 @@ public class Encryptor {
             }
         }
 
+        //padding the text with X's since it doesnt fit R*C exactly
         if(plaintextNoSpaces.length() % numColumns != 0){
             numRows = 1 + plaintextNoSpaces.length()/numColumns;
             for(int i = plaintextNoSpaces.length(); i < numRows * numColumns; i++){
@@ -18,6 +19,7 @@ public class Encryptor {
             }
         }
         else{
+            //no padding needed
             numRows = plaintextNoSpaces.length()/numColumns;
         }
 
