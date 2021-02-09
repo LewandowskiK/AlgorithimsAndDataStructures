@@ -3,11 +3,12 @@ package week2.rowcolumntransposition;
 public class Encryptor {
     public static String encryptRowColumn(String plaintext, int numColumns){
         int numRows;
-        String ciphertext = "", plaintextNoSpaces = "";
+        StringBuilder ciphertext = new StringBuilder();
+        StringBuilder plaintextNoSpaces = new StringBuilder();
 
         for(int i = 0; i < plaintext.length(); i++){
             if(plaintext.charAt(i) != ' '){
-                plaintextNoSpaces += plaintext.charAt(i);
+                plaintextNoSpaces.append(plaintext.charAt(i));
             }
         }
 
@@ -15,7 +16,7 @@ public class Encryptor {
         if(plaintextNoSpaces.length() % numColumns != 0){
             numRows = 1 + plaintextNoSpaces.length()/numColumns;
             for(int i = plaintextNoSpaces.length(); i < numRows * numColumns; i++){
-                plaintextNoSpaces += "X";
+                plaintextNoSpaces.append("X");
             }
         }
         else{
@@ -27,17 +28,16 @@ public class Encryptor {
             int index = col;
 
             for(int row = 0; row < numRows; row++){
-                ciphertext += plaintextNoSpaces.toUpperCase().charAt(index);
+                ciphertext.append(plaintextNoSpaces.toString().toUpperCase().charAt(index));
                 index += numColumns;
             }
-
         }
 
-        return ciphertext;
+        return ciphertext.toString();
     }
 
     public static String decryptRowColumn(String cipherText, int numColumns){
-        String plaintext = "";
+        StringBuilder plaintext = new StringBuilder();
 
         int numRows = cipherText.length()/numColumns;
 
@@ -46,11 +46,11 @@ public class Encryptor {
             int index = row;
 
             for(int col = 0; col < numColumns; col++){
-                plaintext += cipherText.charAt(index);
+                plaintext.append(cipherText.charAt(index));
                 index += numRows;
             }
         }
 
-        return plaintext;
+        return plaintext.toString();
     }
 }
